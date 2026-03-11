@@ -1,0 +1,90 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    margin: 0;
+}
+
+.app-container {
+    background: white;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 { font-size: 1.5rem; color: #333; margin-bottom: 20px; }
+
+.total-display {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    color: white;
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+}
+
+#total-amount {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 5px 0;
+}
+
+.total-items-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.item-info { text-align: left; }
+.item-name { display: block; font-weight: 600; color: #444; }
+.item-price { font-size: 0.8rem; color: #888; }
+
+.controls { display: flex; align-items: center; }
+
+.controls button {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    border: none;
+    background: #f0f2f5;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    outline: none;
+}
+
+.controls button:active { background: #e0e0e0; transform: scale(0.95); }
+
+.controls span {
+    min-width: 30px;
+    margin: 0 10px;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.reset-btn {
+    margin-top: 25px;
+    background: none;
+    border: none;
+    color: #e74c3c;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 10px;
+}

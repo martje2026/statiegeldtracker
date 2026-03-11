@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Statiegeld Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <h1>Statiegeld Tracker</h1>
+        
+        <div class="total-display">
+            <span class="total-items-label">Totaal waarde:</span>
+            <span id="total-amount">€ 0,00</span>
+            <div id="total-items" class="total-items-label">0 items in huis</div>
+        </div>
+
+        <div class="item">
+            <div class="item-info">
+                <span class="item-name">Blikjes / Flesjes</span>
+                <span class="item-price">€ 0,15 per stuk</span>
+            </div>
+            <div class="controls">
+                <button onclick="changeCount('small', -1)">-</button>
+                <span id="count-small">0</span>
+                <button onclick="changeCount('small', 1)">+</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-info">
+                <span class="item-name">Grote Flessen</span>
+                <span class="item-price">€ 0,25 per stuk</span>
+            </div>
+            <div class="controls">
+                <button onclick="changeCount('large', -1)">-</button>
+                <span id="count-large">0</span>
+                <button onclick="changeCount('large', 1)">+</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-info">
+                <span class="item-name">Bierflesjes</span>
+                <span class="item-price">€ 0,10 per stuk</span>
+            </div>
+            <div class="controls">
+                <button onclick="changeCount('beer', -1)">-</button>
+                <span id="count-beer">0</span>
+                <button onclick="changeCount('beer', 1)">+</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-info">
+                <span class="item-name">Beugelflesjes</span>
+                <span class="item-price">€ 0,20 per stuk</span>
+            </div>
+            <div class="controls">
+                <button onclick="changeCount('swing', -1)">-</button>
+                <span id="count-swing">0</span>
+                <button onclick="changeCount('swing', 1)">+</button>
+            </div>
+        </div>
+
+        <button class="reset-btn" onclick="resetAll()">Alles op nul zetten</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
