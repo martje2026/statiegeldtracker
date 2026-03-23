@@ -30,6 +30,19 @@
             </div>
         </div>
 
+         <div class="item">
+            <div class="item-info">
+                <span class="item-name">Beugelflesjes</span>
+                <span class="item-price">€ 0,20 per stuk</span>
+            </div>
+            <div class="controls">
+                <button onclick="changeCount('swing', -1)">-</button>
+                <span id="count-swing">0</span>
+                <button onclick="changeCount('swing', 1)">+</button>
+            </div>
+        </div>
+        
+
         <div class="item">
             <div class="item-info">
                 <span class="item-name">Blikjes / Flesjes</span>
@@ -56,17 +69,7 @@
 
        
 
-        <div class="item">
-            <div class="item-info">
-                <span class="item-name">Beugelflesjes</span>
-                <span class="item-price">€ 0,20 per stuk</span>
-            </div>
-            <div class="controls">
-                <button onclick="changeCount('swing', -1)">-</button>
-                <span id="count-swing">0</span>
-                <button onclick="changeCount('swing', 1)">+</button>
-            </div>
-        </div>
+       
 
         <button class="reset-btn" onclick="resetAll()">Alles op nul zetten</button>
     </div>
