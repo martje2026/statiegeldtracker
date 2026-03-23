@@ -3,6 +3,7 @@ let smallCount = parseInt(localStorage.getItem('smallCount')) || 0;
 let largeCount = parseInt(localStorage.getItem('largeCount')) || 0;
 let beerCount = parseInt(localStorage.getItem('beerCount')) || 0;
 let swingCount = parseInt(localStorage.getItem('swingCount')) || 0;
+let BoxbeerCount = parseInt(localStorage.getItem('BoxbeerCount')) || 0;
 
 // Toon de opgeslagen data direct bij het opstarten
 updateDisplay();
@@ -13,9 +14,10 @@ function updateDisplay() {
     document.getElementById('count-large').innerText = largeCount;
     document.getElementById('count-beer').innerText = beerCount;
     document.getElementById('count-swing').innerText = swingCount;
+    document.getElementById('count-Boxbeer').innerText = BoxbeerCount;
     
     // Geld berekenen
-    const totalMoney = (smallCount * 0.15) + (largeCount * 0.25) + (beerCount * 0.10) + (swingCount * 0.20);
+    const totalMoney = (smallCount * 0.15) + (largeCount * 0.25) + (beerCount * 0.10) + (swingCount * 0.20)+ (BoxbeerCount * 3.90);
     document.getElementById('total-amount').innerText = `€ ${totalMoney.toFixed(2)}`;
 
     // Aantal stuks berekenen
@@ -27,6 +29,7 @@ function updateDisplay() {
     localStorage.setItem('largeCount', largeCount);
     localStorage.setItem('beerCount', beerCount);
     localStorage.setItem('swingCount', swingCount);
+    localStorage.setItem('BoxbeerCount', BoxbeerCount);
 }
 
 function changeCount(type, amount) {
@@ -34,6 +37,7 @@ function changeCount(type, amount) {
     if (type === 'large') largeCount = Math.max(0, largeCount + amount);
     if (type === 'beer') beerCount = Math.max(0, beerCount + amount);
     if (type === 'swing') swingCount = Math.max(0, swingCount + amount);
+    if (type === 'Boxbeer') BoxbeerCount = Math.max(0, BoxbeerCount + amount);
     updateDisplay();
 }
 
@@ -43,6 +47,7 @@ function resetAll() {
         largeCount = 0;
         beerCount = 0;
         swingCount = 0;
+        BoxbeerCount = 0;
         updateDisplay();
     }
 }
